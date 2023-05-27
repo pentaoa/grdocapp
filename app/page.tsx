@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { getBlogViews, getTweetCount, getStarCount } from 'lib/metrics';
 import {
   ArrowIcon,
   GitHubIcon,
@@ -12,18 +11,6 @@ import { name, about, bio, avatar } from 'lib/info';
 export const revalidate = 60;
 
 export default async function HomePage() {
-  let starCount, views, tweetCount;
-
-  try {
-    [starCount, views, tweetCount] = await Promise.all([
-      getStarCount(),
-      getBlogViews(),
-      getTweetCount(),
-    ]);
-  } catch (error) {
-    console.error(error);
-  }
-
   return (
     <section>
       <h1 className="font-bold text-3xl font-serif">{name}</h1>
@@ -40,28 +27,7 @@ export default async function HomePage() {
           priority
         />
         <div className="mt-8 md:mt-0 ml-0 md:ml-6 space-y-2 text-neutral-500 dark:text-neutral-400">
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://twitter.com/leeerob"
-            className="flex items-center gap-2"
-          >
-            <TwitterIcon />
-            {`${tweetCount.toLocaleString()} tweets all time`}
-          </a>
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/leerob"
-            className="flex items-center gap-2"
-          >
-            <GitHubIcon />
-            {`${starCount.toLocaleString()} stars on this repo`}
-          </a>
-          <Link href="/blog" className="flex items-center">
-            <ViewsIcon />
-            {`${views.toLocaleString()} blog views all time`}
-          </Link>
+          经典常熟。
         </div>
       </div>
       <p className="my-5 max-w-[600px] text-neutral-800 dark:text-neutral-200">

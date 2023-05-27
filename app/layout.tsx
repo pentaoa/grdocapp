@@ -14,18 +14,18 @@ const kaisei = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Lee Robinson',
-    template: '%s | Lee Robinson',
+    default: 'Grada-个人网站',
+    template: '%s | Grada-个人网站',
   },
-  description: 'Developer, writer, and creator.',
+  description: '一个高中男生',
   openGraph: {
-    title: 'Lee Robinson',
-    description: 'Developer, writer, and creator.',
-    url: 'https://leerob.io',
-    siteName: 'Lee Robinson',
+    title: 'Grada-个人网站',
+    description: '点击来访问！',
+    url: 'https://grada.site',
+    siteName: 'Grdoc',
     images: [
       {
-        url: 'https://leerob.io/og.jpg',
+        url: 'https://ihs-1317591693.cos.ap-guangzhou.myqcloud.com/grdoc/图标.png',
         width: 1920,
         height: 1080,
       },
@@ -44,16 +44,8 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  twitter: {
-    title: 'Lee Robinson',
-    card: 'summary_large_image',
-  },
   icons: {
     shortcut: '/favicon.ico',
-  },
-  verification: {
-    google: 'eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw',
-    yandex: '14d2e73487fa6c71',
   },
 };
 
