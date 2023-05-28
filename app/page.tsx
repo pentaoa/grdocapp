@@ -14,10 +14,13 @@ export const revalidate = 60;
 export default async function HomePage() {
   return (
     <section>
-      <h1 className="font-bold font-serif text-5xl dark:text-neutral-200">{name}</h1>
+
+      <h1 className="font-bold text-5xl dark:text-neutral-200">{name}</h1>
+
       <p className="my-5 max-w-[460px] text-neutral-800 dark:text-neutral-200">
         {about()}
       </p>
+
       <div className="flex items-start md:items-center my-8 flex-col md:flex-row">
         <Image
           alt={name}
@@ -28,13 +31,11 @@ export default async function HomePage() {
           priority
         />
         <div className="mt-8 md:mt-0 ml-0 md:ml-6 space-y-2 text-neutral-500 dark:text-neutral-400">
-          Grada 是我的网名。
-          跟高兴认识你。
+          欢迎！
+          很高兴认识你。
         </div>
       </div>
-      <p className="my-5 font-extrabold text-4xl text-center p-5 text-neutral-800 dark:text-neutral-200 rounded-lg">
-        夏日新冒险 人生新征程
-      </p>
+
       <ul className="flex flex-col md:flex-row space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
         <li>
           <a
@@ -44,7 +45,7 @@ export default async function HomePage() {
             href="https://github.com/pentaoa"
           >
             <ArrowIcon />
-            <p className="px-2">follow me on Github</p>
+            <p className="px-2">在 Gtihub 上追踪我</p>
             <GitHubIcon />
           </a>
         </li>

@@ -18,8 +18,6 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://ihs-1317591693.cos.ap-guangzhou.myqcloud.com/grdoc/图标.png',
-        width: 1920,
-        height: 1080,
       },
     ],
     locale: 'en-US',
