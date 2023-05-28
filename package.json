@@ -2,10 +2,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run setup && next build",
-    "build-only": "next build",
+    "build": "next build",
     "start": "next start",
-    "setup": "node ./lib/setup.mjs"
+    "lint": "next lint",
+    "export": "npm run build && next export -o _static"
   },
   "dependencies": {
     "@octokit/rest": "^19.0.7",
