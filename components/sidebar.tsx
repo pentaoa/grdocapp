@@ -7,10 +7,10 @@ import { LayoutGroup, motion } from 'framer-motion';
 
 const navItems = {
   '/': {
-    name: 'home',
+    name: '主页',
   },
   '/about': {
-    name: 'about',
+    name: '关于',
   },
   '/blog': {
     name: 'blog',
@@ -22,7 +22,7 @@ function Logo() {
     <Link aria-label="Grada" href="/">
       <img
         src="/logo.svg"
-        className="w-1/2 object-contain"
+        className="pr-2 w-1/2 object-contain"
       />
     </Link>
   );
@@ -35,14 +35,14 @@ export default function Navbar() {
   }
 
   return (
-    <aside className="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0 font-serif">
+    <aside className="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0 font-sans">
       <div className="lg:sticky lg:top-20">
-        <div className="ml-2 md:ml-[12px] mb-2 px-4 md:px-0 md:mb-8 space-y-10 flex flex-col md:flex-row items-start ">
+        <div className="ml-2 md:ml-[12px] mb-2 px-4 md:px-0 md:mb-8 space-y-13 flex flex-col md:flex-row items-start ">
           <Logo />
         </div>
         <LayoutGroup>
           <nav
-            className="flex flex-row md:flex-col items-start relative px-4 md:px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
+            className="flex flex-row md:flex-col items-start px-4 py-4 lg:h-screen md:px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
             id="nav"
           >
             <div className="flex flex-row md:flex-col ml-2 pr-10 mb-2 mt-2 md:mt-0">
@@ -57,6 +57,7 @@ export default function Navbar() {
                       {
                         'text-neutral-500': !isActive,
                         'font-bold': isActive,
+                        'text-xl':isActive,
                       }
                     )}
                   >
@@ -68,8 +69,8 @@ export default function Navbar() {
                           layoutId="sidebar"
                           transition={{
                             type: 'spring',
-                            stiffness: 350,
-                            damping: 30,
+                            stiffness: 444,
+                            damping: 20,
                           }}
                         />
                       ) : null}

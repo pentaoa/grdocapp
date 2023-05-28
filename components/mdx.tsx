@@ -98,5 +98,14 @@ const components = {
 
 interface MdxProps {
   code: string;
-  tweets: Record<string, any>;
+}
+
+export function Mdx({ code, }: MdxProps) {
+  const Component = useMDXComponent(code);
+
+  return (
+    <article className="prose prose-quoteless prose-neutral dark:prose-invert">
+      <Component components={{ ...components}} />
+    </article>
+  );
 }

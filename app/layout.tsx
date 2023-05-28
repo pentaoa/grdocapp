@@ -1,25 +1,17 @@
 import './global.css';
-import clsx from 'clsx';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Sidebar from '../components/sidebar';
 import { Analytics } from '@vercel/analytics/react';
 
-const kaisei = localFont({
-  src: '../public/fonts/kaisei-tokumin-latin-700-normal.woff2',
-  weight: '700',
-  variable: '--font-kaisei',
-  display: 'swap',
-});
-
 export const metadata: Metadata = {
   title: {
-    default: 'Grada-个人网站',
-    template: '%s | Grada-个人网站',
+    default: 'Grada - 个人网站',
+    template: '%s | Grada - 个人网站',
   },
   description: '一个高中男生',
   openGraph: {
-    title: 'Grada-个人网站',
+    title: 'Grada - 个人网站',
     description: '点击来访问！',
     url: 'https://grada.site',
     siteName: 'Grdoc',
@@ -32,17 +24,6 @@ export const metadata: Metadata = {
     ],
     locale: 'en-US',
     type: 'website',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
   icons: {
     shortcut: '/favicon.ico',
@@ -57,10 +38,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={clsx(
-        'text-black bg-white dark:text-white dark:bg-[#111010]',
-        kaisei.variable
-      )}
+      className="text-black bg-white dark:text-white dark:bg-[#111010]"
     >
       <body className="antialiased max-w-4xl mb-40 flex flex-col md:flex-row mx-4 mt-8 md:mt-20 lg:mt-32 lg:mx-auto">
         <Sidebar />

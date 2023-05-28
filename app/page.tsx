@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import React from 'react';
 import {
   ArrowIcon,
   GitHubIcon,
@@ -13,7 +14,7 @@ export const revalidate = 60;
 export default async function HomePage() {
   return (
     <section>
-      <h1 className="font-bold text-3xl font-serif">{name}</h1>
+      <h1 className="font-bold font-serif text-5xl dark:text-neutral-200">{name}</h1>
       <p className="my-5 max-w-[460px] text-neutral-800 dark:text-neutral-200">
         {about()}
       </p>
@@ -27,33 +28,24 @@ export default async function HomePage() {
           priority
         />
         <div className="mt-8 md:mt-0 ml-0 md:ml-6 space-y-2 text-neutral-500 dark:text-neutral-400">
-          经典常熟。
+          Grada 是我的网名。
+          跟高兴认识你。
         </div>
       </div>
-      <p className="my-5 max-w-[600px] text-neutral-800 dark:text-neutral-200">
-        {bio()}
+      <p className="my-5 font-extrabold text-4xl text-center p-5 text-neutral-800 dark:text-neutral-200 rounded-lg">
+        夏日新冒险 人生新征程
       </p>
-      <ul className="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
+      <ul className="flex flex-col md:flex-row space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
         <li>
           <a
             className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://twitter.com/leeerob"
+            href="https://github.com/pentaoa"
           >
             <ArrowIcon />
-            <p className="h-7">follow me on twitter</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://leerob.substack.com"
-          >
-            <ArrowIcon />
-            <p className="h-7">get email updates</p>
+            <p className="px-2">follow me on Github</p>
+            <GitHubIcon />
           </a>
         </li>
       </ul>

@@ -5,7 +5,7 @@ export const avatar = me;
 export const about = () => {
   return (
     <>
-      Hey, I'm a developer who loves Next.js. I work at BigCo or CoolStartup as a Software Engineer.
+      欢迎来到敝舍！这是我的个人网站的——第 2 个大版本！
     </>
   );
 };

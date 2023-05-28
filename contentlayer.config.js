@@ -10,32 +10,15 @@ const computedFields = {
     type: 'string',
     resolve: (doc) => doc._raw.flattenedPath,
   },
-  tweetIds: {
-    type: 'array',
-    resolve: (doc) => {
-      const tweetMatches = doc.body.raw.match(
-        /<StaticTweet\sid="[0-9]+"\s\/>/g
-      );
-      return tweetMatches?.map((tweet) => tweet.match(/[0-9]+/g)[0]) || [];
-    },
-  },
   structuredData: {
     type: 'object',
-    resolve: (doc) => ({
-      '@context': 'https://schema.org',
+    resolve: (doc) => ({      
       '@type': 'BlogPosting',
       headline: doc.title,
       datePublished: doc.publishedAt,
       dateModified: doc.publishedAt,
       description: doc.summary,
-      image: doc.image
-        ? `https://leerob.io${doc.image}`
-        : `https://leerob.io/api/og?title=${doc.title}`,
-      url: `https://leerob.io/blog/${doc._raw.flattenedPath}`,
-      author: {
-        '@type': 'Person',
-        name: 'Lee Robinson',
-      },
+      author: doc.author,
     }),
   },
 };
@@ -60,6 +43,9 @@ export const Blog = defineDocumentType(() => ({
     image: {
       type: 'string',
     },
+    author: {
+      type: 'string',
+    }
   },
   computedFields,
 }));

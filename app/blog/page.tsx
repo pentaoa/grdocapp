@@ -11,7 +11,7 @@ export default async function BlogPage() {
   return (
     <section>
       <h1 className="font-bold text-3xl font-serif mb-5">文章列表</h1>
-      <div className="font-semibold border-dashed py-3 my-8 text-center border-2 border-indigo-600 rounded-lg">
+      <div className="font-semibold border-dashed p-3 my-8 text-center border-2 border-indigo-600 rounded-lg">
         注：旧文章还在迁移中，有一部分未能移动到这里。
       </div>
       {allBlogs

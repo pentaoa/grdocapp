@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { Mdx } from 'components/mdx';
 import { allBlogs } from 'contentlayer/generated';
 import Balancer from 'react-wrap-balancer';
 
@@ -21,28 +22,14 @@ export async function generateMetadata({
     title,
     publishedAt: publishedTime,
     summary: description,
+    author,
     image,
     slug,
   } = post;
-  const ogImage = image
-    ? `https://leerob.io${image}`
-    : `https://leerob.io/api/og?title=${title}`;
 
   return {
     title,
     description,
-    openGraph: {
-      title,
-      description,
-      type: 'article',
-      publishedTime,
-      url: `https://leerob.io/blog/${slug}`,
-      images: [
-        {
-          url: ogImage,
-        },
-      ],
-    },
   };
 }
 
@@ -53,7 +40,6 @@ export default async function Blog({ params }) {
     notFound();
   }
 
-
   return (
     <section>
       <script type="application/ld+json">
@@ -62,12 +48,13 @@ export default async function Blog({ params }) {
       <h1 className="font-bold text-3xl font-serif max-w-[650px]">
         <Balancer>{post.title}</Balancer>
       </h1>
-      <div className="grid grid-cols-[auto_1fr_auto] items-center mt-4 mb-8 font-mono text-sm max-w-[650px]">
+      <div className="grid grid-cols-[auto_1fr_auto] items-center mt-4 mb-8 text-sm max-w-[650px]">
         <div className="bg-neutral-100 dark:bg-neutral-800 rounded-md px-2 py-1 tracking-tighter">
-          {post.publishedAt}
+          {post.author}    {post.publishedAt}
         </div>
         <div className="h-[0.2em] bg-neutral-50 dark:bg-neutral-800 mx-2" />
       </div>
+      <Mdx code={post.body.code} />
     </section>
   );
 }
