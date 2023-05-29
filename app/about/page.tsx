@@ -11,7 +11,7 @@ export default function AboutPage() {
         <img
         alt="Reading"
         src="https://ihs-1317591693.cos.ap-guangzhou.myqcloud.com/public/small10.jpg"
-        className="h-56 w-full rounded-xl object-cover shadow-xl transition group-hover:drop-shadow-2xl"
+        className="cursor-none h-56 w-full rounded-xl object-cover shadow-xl transition group-hover:drop-shadow-2xl"
         />
 
       <div className="p-4">
@@ -23,7 +23,7 @@ export default function AboutPage() {
         </p>
       </div>
       </a>
-</article>
+      </article>
     </section>
   );
 }

@@ -36,6 +36,22 @@ export default async function HomePage() {
         </div>
       </div>
 
+
+      <div className="rounded:lg shadow-xl bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
+        
+        <p className="p-3 text-2xl font-semibold italic ">
+          盛夏新冒险，人生新旅程！
+        </p>
+        
+      </div>
+
+      <p className="my-5 text-2xl font-semibold italic text-slate-900">
+      <span className="w-min absolute -inset-1 -skew-y-3 bg-pink-500">
+          <span className="text-center relative text-white">船新版本</span>
+      </span>        
+        欢迎来到 Grdoc 的 V0.2 船新版本！
+      </p>
+
       <ul className="flex flex-col md:flex-row space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
         <li>
           <a
