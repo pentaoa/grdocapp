@@ -1,12 +1,12 @@
 export default function AboutPage() {
   return (
     <section>
-      <h1 className="font-bold text-3xl">关于</h1>
-      <p className="my-5 text-neutral-800 dark:text-neutral-200">
-        关于此网站，以及其更新。
+      <h1 className="font-bold text-4xl my-4">关于</h1>
+      <p className="my-4 text-neutral-800 dark:text-neutral-200">
+          回看天际下中流，岩上无心云相逐。
       </p>
       
-      <article className="group">
+      <article className="group my-4">
       <a href="https://www.grada.site/blog/establish"> 
         <img
         alt="Reading"
@@ -24,6 +24,26 @@ export default function AboutPage() {
       </div>
       </a>
       </article>
+
+      <article className="group my-4">
+      <a href="https://www.grada.site/blog/establish"> 
+        <img
+        alt="Reading"
+        src="https://ihs-1317591693.cos.ap-guangzhou.myqcloud.com/public/big6.jpg"
+        className="cursor-none h-56 w-full rounded-xl object-cover shadow-xl transition group-hover:drop-shadow-2xl"
+        />
+
+      <div className="p-4">
+          <h3 className="text-lg font-medium text-gray-900">
+            更新日志
+          </h3>
+        <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+        网站的各个时间节点
+        </p>
+      </div>
+      </a>
+      </article>
+
     </section>
   );
 }
