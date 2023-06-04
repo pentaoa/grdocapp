@@ -17,7 +17,7 @@ export default async function HomePage() {
     <section>
       <h1 className="font-bold text-4xl dark:text-neutral-200">{name} - 个人网站</h1>
 
-      <div className="flex items-start md:items-center my-8 flex-col md:flex-row">
+      <div className="flex my-8 flex-col">
         <Image
           alt={name}
           className="rounded-full grayscale"
@@ -26,13 +26,10 @@ export default async function HomePage() {
           width={100}
           priority
         />
-        <div className="mt-8 md:mt-0 ml-0 md:ml-6 space-y-2 text-neutral-500 dark:text-neutral-400">
-          欢迎！
-        </div>
       </div>
 
       <div className="my-8 ">
-        <p className="p-3 text-2xl font-semibold italic shadow-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+        <p className="p-3 rounded-lg text-2xl font-semibold italic shadow-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
           高考季
         </p>
         <p className="my-5 text-2xl font-semibold italic text-slate-900">
@@ -41,7 +38,7 @@ export default async function HomePage() {
       </div>
 
       <div className="my-20 ">
-        <p className="p-3 text-2xl font-semibold italic shadow-xl bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
+        <p className="p-3 rounded-lg text-2xl font-semibold italic shadow-xl bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
           盛夏新冒险，人生新旅程！
         </p>
         <p className="my-5 text-2xl font-semibold italic text-slate-900">

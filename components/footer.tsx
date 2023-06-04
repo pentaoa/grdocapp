@@ -29,7 +29,7 @@ function Logo() {
     <Link aria-label="Grada" href="/">
       <img
         src="/logo.svg"
-        className="pr-2 w-1/4 object-contain"
+        className="h-7"
       />
     </Link>
   );
@@ -42,7 +42,7 @@ export default function Footer() {
   }
 
   return (
-    <div className="fixed mx-auto inset-x-0 lace-self-center shadow-lg shrink grid grid-flow-row-dense w-5/6 bg-stone-300 bg-opacity-50 backdrop-filter backdrop-blur-lg my-3 bottom-0 rounded-lg">
+    <div className="fixed justify-center flex max-h-16 mx-auto inset-x-0 lace-self-center shadow-lg shrink w-5/6 bg-stone-300 bg-opacity-70 backdrop-filter backdrop-blur-lg my-3 bottom-0 rounded-lg">
       <div>
         <LayoutGroup>
           <nav
@@ -59,7 +59,7 @@ export default function Footer() {
                     className={clsx(
                       'transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle',
                       {
-                        'text-neutral-500': !isActive,
+                        'text-neutral-600': !isActive,
                         'font-bold': isActive,
                         
                       }

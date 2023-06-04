@@ -1,3 +1,11 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: '关于',
+  description: '网站信息',
+};
+
 export default function AboutPage() {
   return (
     <section>
@@ -7,7 +15,7 @@ export default function AboutPage() {
       </p>
       
       <article className="group my-4">
-      <a href="https://www.grada.site/blog/establish"> 
+      <Link href="/blog/establish"> 
         <img
         alt="Reading"
         src="https://ihs-1317591693.cos.ap-guangzhou.myqcloud.com/public/small10.jpg"
@@ -22,11 +30,11 @@ export default function AboutPage() {
         在写这个网站的前一个网站的时候写的文章。时间大概在四月左右，我开始了建站的日程。
         </p>
       </div>
-      </a>
+      </Link>
       </article>
 
       <article className="group my-4">
-      <a href="https://www.grada.site/blog/establish"> 
+      <a href="https://github.com/pentaoa/grdocapp/commit/main"> 
         <img
         alt="Reading"
         src="https://ihs-1317591693.cos.ap-guangzhou.myqcloud.com/public/big6.jpg"

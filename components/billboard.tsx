@@ -1,9 +1,9 @@
 export default function Billboard() {
 
   return (
-    <div className="absolute w-40 h-2/5 p-3 right-10 rounded-lg border-dashed border-2 border-indigo-600">
-      <h2 className="font-bold text-2xl">
-        告示牌
+    <div className="antialiased md:hidden fixed p-3 h-100 w-100 bg-stone-300 bg-opacity-70 backdrop-filter backdrop-blur-lg">
+      <h2 className="font-bold text-5xl ">
+        请使用电脑访问。
       </h2>
     </div>
   );

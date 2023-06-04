@@ -28,9 +28,10 @@ export default function RootLayout({
         <main className="flex-auto mx-auto min-w-0 max-w-3xl mt-6 md:mt-0 flex flex-col px-2 md:px-0">
           {children}
         </main>
-
-        <Footer />
+        
       </body>
+      <Footer />
+      <Billboard />
     </html>
   );
 }
