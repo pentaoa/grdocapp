@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { LayoutGroup, motion } from 'framer-motion';
+import { name, about, bio, avatar } from 'lib/info';
 
 const navItems = {
   '/': {
@@ -13,7 +14,13 @@ const navItems = {
     name: '关于',
   },
   '/blog': {
-    name: 'blog',
+    name: 'Blog',
+  },
+  '/vlog':{
+    name: 'Vlog',
+  },
+  '/jdyx': {
+    name: '近大远小',
   },
 };
 
@@ -28,16 +35,16 @@ function Logo() {
   );
 }
 
-export default function Navbar() {
+export default function Sidebar() {
   let pathname = usePathname() || '/';
   if (pathname.includes('/blog/')) {
     pathname = '/blog';
   }
 
   return (
-    <aside className="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0 font-sans">
+    <aside className="md:w-[180px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0 font-sans">
       <div className="lg:sticky lg:top-20">
-        <div className="ml-2 md:ml-[12px] mb-2 px-4 md:px-0 md:mb-8 space-y-13 flex flex-col md:flex-row items-start ">
+        <div className="ml-2 md:ml-[12px] mb-2 px-4 md:px-0 md:mb-8 flex flex-col items-start">
           <Logo />
         </div>
         <LayoutGroup>
@@ -45,7 +52,7 @@ export default function Navbar() {
             className="flex flex-row md:flex-col items-start px-4 py-4 lg:h-screen md:px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
             id="nav"
           >
-            <div className="flex flex-row md:flex-col ml-2 pr-10 mb-2 mt-2 md:mt-0">
+            <div className="overflow-x-auto flex flex-row md:flex-col ml-2 pr-10 mb-2 mt-2 md:mt-0">
               {Object.entries(navItems).map(([path, { name }]) => {
                 const isActive = path === pathname;
                 return (
