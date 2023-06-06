@@ -10,8 +10,8 @@ const navItems = {
   '/': {
     name: '主页',
   },
-  '/about': {
-    name: '关于',
+  '/event': {
+    name: '特殊页面',
   },
   '/blog': {
     name: 'Blog',
@@ -19,21 +19,8 @@ const navItems = {
   '/vlog':{
     name: 'Vlog',
   },
-  '/jdyx': {
-    name: '近大远小',
-  },
 };
 
-function Logo() {
-  return (
-    <Link aria-label="Grada" href="/">
-      <img
-        src="/logo.svg"
-        className="h-7"
-      />
-    </Link>
-  );
-}
 
 export default function Footer() {
   let pathname = usePathname() || '/';
@@ -42,14 +29,17 @@ export default function Footer() {
   }
 
   return (
-    <div className="fixed justify-center flex max-h-16 mx-auto inset-x-0 lace-self-center shadow-lg shrink w-5/6 bg-stone-300 bg-opacity-70 backdrop-filter backdrop-blur-lg my-3 bottom-0 rounded-lg">
-      <div>
+    <div className="fixed justify-between flex mx-auto inset-x-0 shadow-lg shrink w-5/6 bg-stone-300 bg-opacity-70 backdrop-filter backdrop-blur-lg my-3 bottom-0 rounded-lg">
+      <div className="w-8 my-auto ml-4">
+        <img src="logo.svg" className=""></img>
+      </div>
+      <div className="mx-auto">
         <LayoutGroup>
           <nav
-            className="flex justify-center px-4 my-2 fade"
+            className="flex px-4 my-2 fade w-full"
             id="nav"
           >
-            <div className="flex justify-center overflow-x-auto flex-row w-full">
+            <div className="flex flex-row">
               {Object.entries(navItems).map(([path, { name }]) => {
                 const isActive = path === pathname;
                 return (
@@ -85,6 +75,9 @@ export default function Footer() {
             </div>
           </nav>
         </LayoutGroup>
+      </div>
+      <div className="w-8 my-auto mr-4">
+        <div className="loader h-4 w-4 border-2 hover:animate-spin border-gray-600 border-dashed rounded-full"></div>
       </div>
     </div>
   );

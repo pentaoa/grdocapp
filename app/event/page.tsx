@@ -2,17 +2,16 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: '关于',
-  description: '网站信息',
+  title: '特殊页面',
 };
 
 export default function AboutPage() {
   return (
     <section>
-      <h1 className="font-bold text-4xl my-4">关于</h1>
-      <p className="my-4 text-neutral-800 dark:text-neutral-200">
+      <h1 className="font-bold text-4xl my-4">特殊页面</h1>
+      <div className="my-4 text-neutral-800 dark:text-neutral-200">
           回看天际下中流，岩上无心云相逐。
-      </p>
+      </div>
       
       <article className="group my-4">
       <Link href="/blog/establish"> 
@@ -26,9 +25,9 @@ export default function AboutPage() {
           <h3 className="text-lg font-medium text-gray-900">
             建站小记
           </h3>
-        <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+        <div className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
         在写这个网站的前一个网站的时候写的文章。时间大概在四月左右，我开始了建站的日程。
-        </p>
+        </div>
       </div>
       </Link>
       </article>
@@ -45,9 +44,9 @@ export default function AboutPage() {
           <h3 className="text-lg font-medium text-gray-900">
             更新日志
           </h3>
-        <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+        <div className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
         网站的各个时间节点
-        </p>
+        </div>
       </div>
       </a>
       </article>

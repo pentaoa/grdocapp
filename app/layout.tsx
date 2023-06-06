@@ -31,7 +31,6 @@ export default function RootLayout({
         
       </body>
       <Footer />
-      <Billboard />
     </html>
   );
 }
