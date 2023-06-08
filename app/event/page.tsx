@@ -35,7 +35,7 @@ export default function AboutPage() {
       <article className="group my-4">
       <a href="https://github.com/pentaoa/grdocapp/commit/main"> 
         <img
-        alt="Reading"
+        alt="Macos"
         src="https://ihs-1317591693.cos.ap-guangzhou.myqcloud.com/public/big6.jpg"
         className="cursor-none h-56 w-full rounded-xl object-cover shadow-xl transition group-hover:drop-shadow-2xl"
         />
@@ -51,6 +51,24 @@ export default function AboutPage() {
       </a>
       </article>
 
+      <div className="group my-4">
+      <link href="https://github.com/pentaoa/grdocapp/commit/main"> 
+        <img
+        alt="MC"
+        src="https://ihs-1317591693.cos.ap-guangzhou.myqcloud.com/grdoc/MCV-Trails-and-Tales.jpg"
+        className="cursor-none h-56 w-full rounded-xl object-cover shadow-xl transition group-hover:drop-shadow-2xl"
+        />
+
+      <div className="p-4">
+          <h3 className="text-lg font-medium text-gray-900">
+            Minecraft 服务器
+          </h3>
+        <div className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+        欢迎来到我的 MC 私人服务器——PtaWorld，该服务器无需正版验证。是一个原版生存服务器，欢迎你的到来。
+        </div>
+      </div>
+      </link>
+      </div>
     </section>
   );
 }
