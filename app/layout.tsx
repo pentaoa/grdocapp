@@ -1,7 +1,6 @@
 import './global.css';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import Sidebar from '../components/sidebar';
 import Billboard from '../components/billboard';
 import Footer from 'components/footer';
 
