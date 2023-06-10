@@ -30,16 +30,13 @@ export default function Footer() {
 
   return (
     <div className="fixed justify-between flex mx-auto inset-x-0 shadow-lg shrink w-5/6 bg-stone-300 bg-opacity-70 backdrop-filter backdrop-blur-lg my-3 bottom-0 rounded-lg">
-      <div className="w-8 my-2 ml-4 ">
+      <div className="w-8 my-2 ml-4 hidden sm:block">
         <img src="logo.svg" className=""></img>
-      </div>
-      <div className="sm:hidden m-auto font-bold text-xl">
-        请使用电脑访问。
       </div>
       <div className="mx-auto">
         <LayoutGroup>
           <nav
-            className="px-4 my-2 fade w-full hidden sm:block"
+            className="px-4 my-2 fade w-full"
             id="nav"
           >
             <div className="flex flex-row">
@@ -79,7 +76,7 @@ export default function Footer() {
           </nav>
         </LayoutGroup>
       </div>
-      <div className="w-8 my-auto mr-4">
+      <div className="w-8 my-auto mr-4 hidden sm:block">
         <div className="loader h-4 w-4 border-2 animate-spin border-gray-600 border-dashed rounded-full"></div>
       </div>
     </div>

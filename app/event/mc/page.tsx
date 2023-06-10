@@ -8,16 +8,20 @@ export const metadata: Metadata = {
 
 export default async function McPage() {
     return (
-        <div>
-            <h1 >
-                PtaWorld
-            </h1>
+        <section>
             <div>
-                如何加入？
+                <h1 className="my-4 font-bold text-4xl">
+                    PtaWorld
+                </h1>
+                
+                <div className="font-semibold border-solid p-3 my-8 text-center border-2 border-indigo-600 rounded-lg">
+                    grada.playmc.fun:25565
+                </div>
+
+                <div className="my-6">
+                    
+                </div>
             </div>
-            <div>
-                首先，
-            </div>
-        </div>
+        </section>
     )
 }

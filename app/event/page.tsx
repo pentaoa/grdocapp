@@ -11,12 +11,12 @@ export default function AboutPage() {
       <h1 className="font-bold text-4xl my-4">特殊页面</h1>
       
       <div className="group my-6">
-        <a href="https://pixelcloud.cn/servers/6481c59e05bed9002d272fae"> 
+        <Link href="/event/mc"> 
           <img
             src="https://ihs-1317591693.cos.ap-guangzhou.myqcloud.com/grdoc/MCV-Trails-and-Tales-sak.webp"
             className="cursor-none h-56 w-full rounded-xl object-cover shadow-xl transition group-hover:drop-shadow-2xl"
           />
-        </a>
+        </Link>
           <div className="p-4">
             <div className="text-lg font-medium text-gray-900">
               Minecraft 服务器
