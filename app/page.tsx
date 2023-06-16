@@ -51,22 +51,7 @@ export default async function HomePage() {
           6月7日，一起加油！ 
         </div>
       </div>
-
-
-      <ul className="flex flex-col md:flex-row space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
-        <li>
-          <a
-            className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/pentaoa"
-          >
-            <ArrowIcon />
-            <p className="px-2">本网站支持投稿！</p>
-            <GitHubIcon />
-          </a>
-        </li>
-      </ul>
+      
     </section>
   );
 }
