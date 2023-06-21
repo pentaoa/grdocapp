@@ -7,7 +7,6 @@ import {
   TwitterIcon,
   ViewsIcon,
 } from 'components/icons';
-import { name, about, bio, avatar } from 'lib/info';
 import Billboard from '../components/billboard';
 
 export const revalidate = 60;
@@ -15,23 +14,29 @@ export const revalidate = 60;
 export default async function HomePage() {
   return (
     <section>
-      <h1 className="font-bold text-4xl dark:text-neutral-200">{name} - 个人网站</h1>
+      <h1 className="font-bold text-4xl dark:text-neutral-200">Grada - 个人网站</h1>
 
       <div className="my-2 text-zinc-400">
         118°10'48" E  25°04'12" N
       </div>
 
       <div className="my-3">
-        <Image
-          alt={name}
-          className="rounded-full grayscale"
-          src={avatar}
-          placeholder="blur"
-          width={100}
-          priority
+        <img
+          className="rounded-full w-1/6"
+          src="cangshu.jpg"
         />
       </div>
       
+      <div className="my-14">
+        <div className="p-3 rounded-lg text-2xl font-semibold italic shadow-xl bg-gradient-to-r from-rose-200 via-purple-500 to-red-500">
+          泉州之旅
+        </div>
+        <Link href="/blog/2023-06-21">
+          <p className="underline my-5 text-2xl italic text-slate-900">
+            查看照片墙
+          </p>
+        </Link>
+      </div>
 
       <div className=" my-14">
         <div className="p-3 rounded-lg text-2xl font-semibold italic shadow-xl bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
@@ -40,8 +45,8 @@ export default async function HomePage() {
         <div className="my-5 text-2xl font-semibold italic text-slate-900">
           欢迎来到 Grdoc 的 V0.2 船新版本！
         </div>
+        使用电脑访问，效果更佳。
       </div>
-
 
       <div className="my-14 ">
         <div className="p-3 rounded-lg text-2xl font-semibold italic shadow-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
@@ -51,7 +56,7 @@ export default async function HomePage() {
           6月7日，一起加油！ 
         </div>
       </div>
-      
+    
     </section>
   );
 }
