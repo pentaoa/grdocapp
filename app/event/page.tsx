@@ -22,7 +22,7 @@ export default function AboutPage() {
               Minecraft 服务器
             </div>
             <div className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-              喝电子汽水，看赛博大海，过二进制夏天！欢迎来到我的 MC 私人服务器——PtaWorld，该服务器无需正版验证。是一个原版生存服务器，欢迎你的到来。
+              喝电子汽水，看赛博大海，过二进制夏天！
             </div>
           </div>
       </div>
@@ -41,7 +41,7 @@ export default function AboutPage() {
             建站小记
           </h3>
           <div className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-            在写这个网站的前一个网站的时候写的文章。时间大概在四月左右，我开始了建站的日程。
+            在写这个网站的时候写的文章。
           </div>
         </div>
       </div>

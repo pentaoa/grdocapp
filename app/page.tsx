@@ -28,9 +28,24 @@ export default async function HomePage() {
       </div>
       
       <div className="my-14">
+        <div className="p-3 rounded-lg text-2xl font-semibold italic shadow-xl bg-gradient-to-r from-red-400 to-rose-200">
+          高考成绩已出
+        </div>
+        <p className="my-5">
+          本人总分 643，省排名 2841。
+        </p>
+        <p className=" my-5 text-2xl font-semibold italic text-slate-900">
+          感谢大家的关心和持续的支持！
+        </p>
+      </div>
+
+      <div className="my-14">
         <div className="p-3 rounded-lg text-2xl font-semibold italic shadow-xl bg-gradient-to-r from-rose-200 via-purple-500 to-red-500">
           泉州之旅
         </div>
+        <p className="my-5">
+          6月17日到19日，一场小小的毕业旅行。
+        </p>
         <Link href="/blog/2023-06-21">
           <p className="underline my-5 text-2xl italic text-slate-900">
             查看照片墙
