@@ -32,7 +32,7 @@ export default async function HomePage() {
           高考成绩已出
         </div>
         <p className="my-5">
-          本人总分 643，省排名 2841。
+          将在7月初填报志愿。
         </p>
         <p className=" my-5 text-2xl font-semibold italic text-slate-900">
           感谢大家的关心和持续的支持！
@@ -60,7 +60,7 @@ export default async function HomePage() {
         <div className="my-5 text-2xl font-semibold italic text-slate-900">
           欢迎来到 Grdoc 的 V0.2 船新版本！
         </div>
-        使用电脑访问，效果更佳。
+        自主开发设计（有一定缺陷）！使用电脑访问，效果更佳。
       </div>
 
       <div className="my-14 ">

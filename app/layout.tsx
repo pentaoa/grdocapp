@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Billboard from '../components/billboard';
 import Footer from 'components/footer';
+import { Suspense } from 'react';
+import Loading from './loading';
 
 export const metadata: Metadata = {
   title: {
@@ -24,10 +26,11 @@ export default function RootLayout({
     >
       <body className="antialiased mx-3 mb-20 flex flex-col md:flex-row mt-5 md:mt-20 lg:mt-32 lg:mx-auto">
 
+        <Suspense fallback={<Loading />}>
         <main className="flex-auto mx-auto min-w-0 max-w-3xl mt-6 md:mt-0 flex flex-col px-2 md:px-0">
           {children}
         </main>
-        
+        </Suspense>
       </body>
       <Footer />
     </html>
