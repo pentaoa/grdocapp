@@ -1,13 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import React from 'react';
-import {
-  ArrowIcon,
-  GitHubIcon,
-  TwitterIcon,
-  ViewsIcon,
-} from 'components/icons';
-import Billboard from '../components/billboard';
 
 export const revalidate = 60;
 

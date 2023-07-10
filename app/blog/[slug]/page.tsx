@@ -56,7 +56,7 @@ export default async function Blog({ params }) {
           {post.publishedAt}
         </div>
       </div>
-      <Mdx code={post.body.code}/>
+        <Mdx code={post.body.code}/>
     </section>
   );
 }

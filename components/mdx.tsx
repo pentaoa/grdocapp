@@ -2,6 +2,8 @@ import * as React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useMDXComponent } from 'next-contentlayer/hooks';
+import { Suspense } from 'react';
+import Loading from 'app/loading';
 
 const CustomLink = (props) => {
   const href = props.href;
@@ -21,10 +23,6 @@ const CustomLink = (props) => {
   return <a target="_blank" rel="noopener noreferrer" {...props} />;
 };
 
-function RoundedImage(props) {
-  return <Image alt={props.alt} className="rounded-lg" {...props} />;
-}
-
 function Callout(props) {
   return (
     <div className="flex bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 my-8">
@@ -36,7 +34,6 @@ function Callout(props) {
 
 
 const components = {
-  Image: RoundedImage,
   a: CustomLink,
   Callout,
 };
