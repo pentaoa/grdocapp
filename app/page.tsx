@@ -20,6 +20,15 @@ export default async function HomePage() {
       </div>
       
       <div className="my-14">
+        <div className="p-3 rounded-lg text-2xl font-semibold italic shadow-xl bg-orange-500">
+          SUSTech,I'm coming!
+        </div>
+        <p className=" my-5 text-2xl font-semibold italic text-slate-900">
+          成功录取于南科大！
+        </p>
+      </div>
+
+      <div className="my-14">
         <div className="p-3 rounded-lg text-2xl font-semibold italic shadow-xl bg-gradient-to-r from-red-400 to-rose-200">
           高考成绩已出
         </div>
