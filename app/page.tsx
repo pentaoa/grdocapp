@@ -20,7 +20,7 @@ export default async function HomePage() {
       </div>
       
       <div className="my-14">
-        <div className="p-3 rounded-lg text-2xl font-semibold italic shadow-xl bg-orange-500">
+        <div className="p-3 rounded-lg text-2xl font-semibold shadow-xl bg-orange-500">
           SUSTech,I'm coming!
         </div>
         <p className=" my-5 text-2xl font-semibold italic text-slate-900">

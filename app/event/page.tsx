@@ -46,24 +46,6 @@ export default function AboutPage() {
         </div>
       </div>
 
-
-      <div className="group my-6">
-        <Link href="/event/jdyx"> 
-          <img
-            src="https://ihs-1317591693.cos.ap-guangzhou.myqcloud.com/grdoc/0385_gt.jpg"
-            className="cursor-none h-56 w-full rounded-xl object-cover shadow-xl transition group-hover:drop-shadow-2xl"
-          />
-        </Link>
-          <div className="p-4">
-            <div className="text-lg font-medium text-gray-900">
-              员工
-            </div>
-            <div className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-              近大远小。
-            </div>
-          </div>
-      </div>
-
       <div className="group my-6">
         <a href="https://github.com/pentaoa/grdocapp/commit/main"> 
         <img
